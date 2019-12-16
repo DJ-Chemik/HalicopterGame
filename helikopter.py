@@ -14,5 +14,12 @@ pygame.init()
 szer = 600
 wys = 600
 screen = pygame.display.set_mode((szer,wys))
-napisz("Naciśnij Spacje by zacząć",80,150,20,True)
-pygame.display.update()
+
+
+while True:
+    for event in pygame.event.get(): #przejdź po wszystkich elementach listy zdarzeń
+        if event.type==pygame.QUIT: #jeśli naciśniemy klawisz X w oknie
+            pygame.quit() #zamyka okno gry
+            #quit() #zamyka IDLE
+    napisz("Naciśnij Spacje by zacząć",80,150,20,True)
+    pygame.display.update()
